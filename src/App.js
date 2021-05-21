@@ -1,25 +1,26 @@
-import logo from './logo.svg';
 import './App.css';
+import ChooseMode from './components/ChooseMode';
+import { useState, useEffect } from 'react';
+import DecInput from './components/Dec';
+import Output from './components/OutputDigit';
 
-function App() {
+
+const App = () => {
+
+  const [chosenMode, setMode] = useState('OCT');
+  const [text, setText] = useState('');
+
+  useEffect(() => {
+    console.log("use effect ", chosenMode);
+  }, chosenMode);
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <ChooseMode setMode={setMode} />
+      <DecInput text={text} setText={setText} />
+      <Output chosenMode={chosenMode} text={text} />
     </div>
-  );
-}
+  )
+};
 
 export default App;
