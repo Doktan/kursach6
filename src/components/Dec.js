@@ -1,10 +1,18 @@
-import React from 'react';
+import { React, useRef, useEffect, Component } from 'react';
 import { tryInput } from '../functions/fs';
 
 const DecInput = (props) => {
 
     const OnValueChange = (e) => {
-        props.setText(tryInput(e.target.value));
+
+       let inputInfo = tryInput(e.target.value);
+       if(inputInfo === 'Ошибка!')
+            props.showError(true);
+        else{
+            props.setText(inputInfo);
+            props.showError(false);
+        }
+
     };
 
     return (
@@ -12,7 +20,7 @@ const DecInput = (props) => {
             <p>Введите число</p>
             <div>
                 <label>
-                    <input type='text' value={props.text} onChange={OnValueChange} />
+                    <input type='text' value={props.text} onChange={OnValueChange} maxLength='15' />
                     10 C.C.
                 </label>
             </div>

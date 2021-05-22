@@ -7,7 +7,7 @@ const Output = (props) => {
         <div>
             <p>Вывод</p>
             <label>
-                <input type='text' readOnly='true' value={props.text} />
+                <input type='text' readOnly='true' value={props.text} maxLength='15' />
                 {convertModeIntoDigit(props.chosenMode) + ' C.C.'}
             </label>
         </div>
