@@ -1,6 +1,6 @@
 describe('Проверка состояния интерфейсов их взаимодействия', () => {
     it('Входим на сайт и проверяем наличие всех элементов', () => {
-        cy.visit('http://localhost:3000/')
+        cy.visit('/')
         cy.get('div.selector_block').should('exist')
         cy.get('div.input_block').should('exist')
         cy.get('div.output_block').should('exist')

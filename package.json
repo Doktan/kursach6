@@ -14,7 +14,8 @@
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
-    "jest": "jest",
+    "jest": "jest App.test.js",
+    "server": "nodemon server.js",
     "cypress": "cypress run --spec cypress/integration/tests/*.spec.js",
     "eject": "react-scripts eject"
   },
@@ -38,6 +39,8 @@
   },
   "devDependencies": {
     "@babel/plugin-transform-modules-commonjs": "^7.14.0",
-    "cypress": "^7.3.0"
+    "cypress": "^7.3.0",
+    "express": "^4.17.1",
+    "nodemon": "^2.0.7"
   }
 }
