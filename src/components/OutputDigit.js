@@ -4,10 +4,10 @@ import { convertModeIntoDigit } from '../functions/fs';
 const Output = (props) => {
 
     return (
-        <div>
+        <div className='output_block'>
             <p>Вывод</p>
-            <label>
-                <input type='text' readOnly='true' value={props.text} maxLength='15' />
+            <label className='output_label'>
+                <input type='text' readOnly='true' value={props.text} maxLength='15' className='output_text'/>
                 {convertModeIntoDigit(props.chosenMode) + ' C.C.'}
             </label>
         </div>

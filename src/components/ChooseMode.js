@@ -7,9 +7,9 @@ const ChooseMode = (props) => {
     };
 
     return (
-        <div>
+        <div className='selector_block'>
             <p>Выберите систему счисления</p>
-            <select onChange={onItemSelect}>
+            <select onChange={onItemSelect} className='selector'>
                 <option value='OCT'>OCT</option>
                 <option value='HEX'>HEX</option>
             </select>

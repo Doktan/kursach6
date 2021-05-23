@@ -16,11 +16,11 @@ const DecInput = (props) => {
     };
 
     return (
-        <div>
+        <div className='input_block'>
             <p>Введите число</p>
             <div>
-                <label>
-                    <input type='text' value={props.text} onChange={OnValueChange} maxLength='15' />
+                <label className='input_label'>
+                    <input type='text' value={props.text} onChange={OnValueChange} maxLength='15' className='input_text' />
                     10 C.C.
                 </label>
             </div>
